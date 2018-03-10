@@ -46,11 +46,14 @@ func main() {
 	var v  []int = make([]int, 100) // the slice v now refers to a new array of 100 ints
 
 	// Unnecessarily complex:
-	var p *[]int = new([]int)
-	*p = make([]int, 100, 100)
+	var p2 *[]int = new([]int)
+	*p2 = make([]int, 100, 100)
 
 	// Idiomatic:
-	v := make([]int, 100)
+	v2 := make([]int, 100)
+
+	// Print
+	fmt.Println( p, v, v2)
 
 
 }

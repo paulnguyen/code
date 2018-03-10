@@ -110,30 +110,5 @@ func main() {
 		    },
 	*/
 
-	/*
-
-		The inverse operation to marshaling, decoding JSON and populating a Go
-		data structure, is called unmarshaling, and it is done by
-		json.Unmarshal. The code below unmarshals the JSON movie data into a
-		slice of structs whose only field is Title. By defining suitable Go
-		data structures in this way, we can select which parts of the JSON
-		input to decode and which to discard. When Unmarshal returns, it has
-		filled in the slice with the Title information; other names in the
-		JSON are ignored.
-
-	*/
-
-	fmt.Println("**** JSON Marshaling (JSON -> Go) ****")
-	data, err := json.Marshal(movies)
-	if err != nil {
-		log.Fatalf("JSON marshaling failed: %s", err1)
-	}
-
-	var titles []struct{ Title string }
-
-	if err := json.Unmarshal(data, &titles); err != nil {
-		log.Fatalf("JSON unmarshaling failed: %s", err)
-	}
-	fmt.Println(titles) // "[{Casablanca} {Cool Hand Luke} {Bullitt}]"
 
 }
