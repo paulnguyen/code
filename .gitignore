@@ -1,2 +1,4 @@
 
 *.class
+/c/netbeans/build/
+/c/netbeans/dist/

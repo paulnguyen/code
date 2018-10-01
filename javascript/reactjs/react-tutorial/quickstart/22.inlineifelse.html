@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inline If-Else</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      /*         
+
+        Inline If-Else with Conditional Operator
+
+        Another method for conditionally rendering 
+        elements inline is to use the JavaScript 
+        conditional operator condition ? true : false.
+
+        In the example below, we use it to conditionally 
+        render a small block of text.
+
+      */
+
+
+        render() {
+          const isLoggedIn = this.state.isLoggedIn;
+          return (
+            <div>
+              The user is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+            </div>
+          );
+        }
+
+      /*
+
+        It can also be used for larger expressions although 
+        it is less obvious what’s going on:
+
+      */
+
+        render() {
+          const isLoggedIn = this.state.isLoggedIn;
+          return (
+            <div>
+              {isLoggedIn ? (
+                <LogoutButton onClick={this.handleLogoutClick} />
+              ) : (
+                <LoginButton onClick={this.handleLoginClick} />
+              )}
+            </div>
+          );
+        }
+
+
+    </script>
+
+    <!--
+
+      Just like in JavaScript, it is up to you to choose an appropriate style
+      based on what you and your team consider more readable. Also remember
+      that whenever conditions become too complex, it might be a good time to
+      extract a component.
+
+    -->
+
+  </body>
+</html>

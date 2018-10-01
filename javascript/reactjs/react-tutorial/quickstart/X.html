@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title Here!</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+      /*         
+
+        Components let you split the UI into independent, reusable
+        pieces, and think about each piece in isolation.
+
+        Conceptually, components are like JavaScript functions. 
+        They accept arbitrary inputs (called “props”) and return 
+        React elements describing what should appear on the screen.
+
+      */
+
+      const element = <h1>Hello, world</h1>;
+
+      /*
+
+
+      */
+
+
+      /* Render Content */
+      
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+
+
+    </script>
+
+    <!--
+
+
+    -->
+
+  </body>
+</html>

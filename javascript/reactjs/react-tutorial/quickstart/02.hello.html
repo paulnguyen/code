@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+    /*
+      Embedding Expressions in JSX:
+      
+      You can put any valid JavaScript expression 
+      inside the curly braces in JSX. For example, 2 + 2, 
+      user.firstName, or formatName(user) are all valid 
+      JavaScript expressions.
+      
+      In the example below, we embed the result of 
+      calling a JavaScript function, formatName(user), 
+      into an <h1> element.
+      
+      Codepen:  https://reactjs.org/redirect-to-codepen/introducing-jsx
+    */
+
+      function formatName(user) {
+        return user.firstName + ' ' + user.lastName;
+      }
+
+      const user = {
+        firstName: 'Harper',
+        lastName: 'Perez'
+      };
+
+    /*
+      We split JSX over multiple lines for readability. 
+      While it isn’t required, when doing this, we also 
+      recommend wrapping it in parentheses to avoid the 
+      pitfalls of automatic semicolon insertion.
+    */
+
+      const element = (
+        <h1>
+          Hello, {formatName(user)}!
+        </h1>
+      );
+
+    /* Render Content */
+    
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+
+
+    </script>
+
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+
+  </body>
+</html>
