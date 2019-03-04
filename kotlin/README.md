@@ -1,6 +1,7 @@
 # kotlin-sandbox
 
 * https://kotlinlang.org/
+* https://kotlinlang.org/docs/reference/
 
 
 # Command Line Setup
@@ -75,13 +76,30 @@
 
 	In order to build Kotlin with Gradle you should set up the kotlin-gradle plugin, apply it to your project and add kotlin-stdlib dependencies. Those actions may also be performed automatically in IntelliJ IDEA by invoking the Tools | Kotlin | Configure Kotlin in Project action.
 
-	* https://kotlinlang.org/docs/reference/using-gradle.html#plugin-and-versions
+* https://kotlinlang.org/docs/reference/using-gradle.html#plugin-and-versions
+* https://kotlinlang.org/docs/reference/using-gradle.html#targeting-the-jvm
+* https://kotlinlang.org/docs/reference/using-gradle.html#configuring-dependencies
 
-	
-	
-	* https://kotlinlang.org/docs/reference/using-gradle.html#targeting-the-jvm
-	* https://kotlinlang.org/docs/reference/using-gradle.html#configuring-dependencies
 
+# Running Code Snipplets
+
+* https://kotlinlang.org/docs/tutorials/quick-run.html
+
+* https://kotlinlang.org/docs/tutorials/quick-run.html#using-scratches
+
+	To create a Kotlin scratch, click File | New | Scratch file and select the Kotlin type.
+
+	In your scratch, you can write any valid Kotlin code, including new functions and classes. Syntax highlighting, auto-completion, and other code editing features of IntelliJ IDEA are supported in scratches.
+
+	Write your code in the scratch and click Run. The execution results will appear opposite the lines of your code.
+
+* https://kotlinlang.org/docs/tutorials/quick-run.html#running-in-repl
+
+	REPL (Read-Eval-Print-Loop) is a tool for running Kotlin code interactively. REPL lets you evaluate expressions and code chunks without creating projects or even functions if you don't need them.
+
+	To run REPL in IntelliJ IDEA, open Tools | Kotlin | Kotlin REPL.
+
+	To run REPL in the OS command line, open /bin/kotlinc-jvm from the directory of standalone Kotlin compiler.
 
 
 
