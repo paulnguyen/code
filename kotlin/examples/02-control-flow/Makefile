@@ -9,7 +9,7 @@ prog=$(strip $(base))
 all: clean
 
 clean: 
-	find . -name "*.jar" -exec rm -rf {} \;	
+	rm -f *.jar
 
 compile:
 	kotlinc $(prog).kt -include-runtime -d $(prog).jar
