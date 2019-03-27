@@ -29,4 +29,3 @@ let width = 94
 let widthLabel2 = label + String(width)
 print ( widthLabel2 )
 
-
