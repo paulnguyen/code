@@ -23,7 +23,8 @@ fun fun1 () {
 }
 
 
-// if statement is an expresstion in kotlin
+// if statement is an expression in kotlin
+// (i.e. can return a value)
 
 fun fun2 () {
 
