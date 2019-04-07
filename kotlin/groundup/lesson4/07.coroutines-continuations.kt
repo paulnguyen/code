@@ -7,6 +7,7 @@
 
 	Also See:
 
+	* https://kotlinlang.org/docs/reference/coroutines-overview.html
 	* https://medium.com/@jagsaund/kotlin-concurrency-with-actors-34bd12531182
 	* https://kotlinlang.org/docs/reference/coroutines/shared-mutable-state-and-concurrency.html
 
@@ -14,9 +15,10 @@
 */
 
 
+// Coroutine - A small "suspendable" block of can that can be execuited in parallel
 
 
-fun fun1 () {
+fun basic () {
 
 
 }

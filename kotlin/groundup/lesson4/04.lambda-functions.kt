@@ -24,8 +24,8 @@ fun fun1 () {
 }
 
 val random = Random()
-val list1 = List( 10, { random.nextInt(100)} )
-val list2 = List( 10 ) { random.nextInt(100) } 
+val list1 = List( 10, { random.nextInt(100)} ) // lambda as last item in arg list
+val list2 = List( 10 ) { random.nextInt(100) } // lambda moved outside of ()'s'
 
 val list = List( 10, { random.nextInt(100)} )
 val histogram = list.map {

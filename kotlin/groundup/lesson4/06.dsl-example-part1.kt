@@ -7,27 +7,17 @@
 
 */
 
-
-
-fun fun1 () {
-
-
-}
-
-
-
-fun fun2 () {
-
-
-
-}
-
+// Calendar Class 
+class Calendar()
 
 
 // Main 
 
 fun main(args: Array<String>) {
 
-	fun1()
-	fun2()
+	// A Calendar DSL
+	fun calendar() {
+		Calendar() 
+	}
+
 }
