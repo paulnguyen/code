@@ -5,10 +5,10 @@
 
     A Swift Tour
 
+    https://developer.apple.com/swift/
     https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/GuidedTour.html
 
 */
-
 
 
 
@@ -23,6 +23,9 @@
  declarations are written the same way.
  
 */
+
+print( "\nObjects and Classes" )
+print( "---------------------" )
 
 
 class Shape1 {
@@ -51,8 +54,6 @@ class Shape2 {
 
 */
 
-print( "\nClass and Object Example" )
-print( "-------------------------" )
 
 var shape = Shape2()
 shape.numberOfSides = 7
@@ -64,6 +65,8 @@ shape.greet( "John" )
 
 /*
  
+    Object Constructor / Deconstructor
+
     This version of the Shape class is missing something important: 
     an initializer to set up the class when an instance is created. 
     Use init to create one.
@@ -107,6 +110,8 @@ print( named_shape1.simpleDescription() )
 
 /*
 
+    Sub-Classes & Explicit Method Overrides
+
     Subclasses include their superclass name after their class name, 
     separated by a colon. There is no requirement for classes to 
     subclass any standard root class, so you can include or omit a 
@@ -149,6 +154,8 @@ print( "test.simpleDescription(): ", test.simpleDescription() )
 
 /*
 
+    Properties with Getters and Setters
+
     In addition to simple properties that are stored, 
     properties can have a getter and a setter.
  
@@ -188,6 +195,8 @@ print("triangle.sideLength: ", triangle.sideLength)
 
 /*
  
+    Will Set & Did Set / Around Execution of Setting a Value
+
     If you don’t need to compute the property but still need to 
     provide code that is run before and after setting a new value, 
     use willSet and didSet. The code you provide is run any time 
@@ -231,6 +240,8 @@ print("triangleAndSquare.triangle.sideLength: ", triangleAndSquare.triangle.side
 
 /*
 
+    Optional Values and the ? Operator
+
     When working with optional values, you can write ? before operations 
     like methods, properties, and subscripting. If the value before 
     the ? is nil, everything after the ? is ignored and the value of 
@@ -241,7 +252,7 @@ print("triangleAndSquare.triangle.sideLength: ", triangleAndSquare.triangle.side
 
 */
 
-print( "\noptional values and the ? operator" )
+print( "\nOptional Values and the ? operator" )
 print( "----------------------------------" )
 
 let optionalSquare1: Square? = Square(sideLength: 2.5, name: "optional square")
@@ -253,3 +264,79 @@ optionalSquare2 = nil
 let sideLength2 = optionalSquare2?.sideLength
 print( sideLength2 )
 
+
+
+
+/*
+ 
+    Nested Functions
+
+    Functions can be nested. Nested functions have 
+    access to variables that were declared in the 
+    outer function. You can use nested functions 
+    to organize the code in a function that is 
+    long or complex.
+ 
+*/
+
+print( "\nNested Functions" )
+print( "----------------" )
+
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+
+print( "returnFifteen(): ", returnFifteen() )
+
+
+
+/*
+    Functions as Arguments
+
+    A function can take another function as one of its arguments.
+*/
+
+print( "\nFunctions as function args (higher-order functions)" )
+print( "---------------------------------------------------" )
+
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+
+var numbers = [20, 19, 7, 12]
+print( "numbers: ", numbers )
+print( "lastThenTen: ", lessThanTen )
+print( "hasAnyMatches(list: numbers, condition: lessThanTen): ", hasAnyMatches(list: numbers, condition: lessThanTen))
+
+
+
+/*
+
+    Swift Protocols (i.e. like Java Interfaces)
+
+    https://docs.swift.org/swift-book/LanguageGuide/Protocols.html
+
+*/
+
+
+print( "\nSwift protocols - like interfaces in Java" )
+print( "---------------------------------------------------" )
+
+
+
+
+ 
