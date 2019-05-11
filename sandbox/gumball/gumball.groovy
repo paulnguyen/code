@@ -1,10 +1,9 @@
 
-import java.lang.reflect.* ;
 import groovy.json.* ;
 
 class GumballMachine {
 	
-	// groovy genereates set/get for properties 
+	// groovy generates set/get for properties 
 	String model  = "M1V192019"
 	String serial = "123997919189"
 	Integer count = 100
@@ -12,7 +11,8 @@ class GumballMachine {
 	Integer cost = 0 ; // configure at setup	
 
 	// update value of coins inserted
-	private void insert( int newValue ) { 
+	private void insert( int value ) { 
+		def newValue = coinValue + value
 		println( "${newValue} > ${cost}?")
 		if ( newValue > cost ) {
 			println( "There's already enough money!" ) ;
@@ -51,7 +51,7 @@ class GumballMachine {
         	this.cost = args[0]
         }     
         else if ( name == "insertQuarter" ) {
-        	insert( coinValue + 25 )
+        	insert( 25 )
         }   
         else if ( name == "turnTheCrank" ) {
         	eject() 
