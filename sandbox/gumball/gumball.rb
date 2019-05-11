@@ -70,7 +70,6 @@ class GumballMachine
 end
 
 
-
 m = GumballMachine.new(50)
 m.configCost(50)
 m.debug()
