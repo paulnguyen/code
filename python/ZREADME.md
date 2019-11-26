@@ -11,3 +11,4 @@
 * https://pythonprogramming.net/data-analysis-tutorials/
 * https://pythonprogramming.net/data-analysis-python-pandas-tutorial-introduction/	
 * https://pythonprogramming.net/machine-learning-tutorials/
+* https://github.com/jakevdp/WhirlwindTourOfPython/
